@@ -5,5 +5,8 @@ package decorator.java;
  */
 public interface Bee {
 
+    /**
+     * Hatch method common to all bee types. 
+     */
     public void hatch(); 
 }
