@@ -1,5 +1,7 @@
 package main.java;
 
+import builder.java.Beehive;
+import builder.java.Beehive.BeeType;
 import singleton.java.Apiary; 
 
 /**
@@ -18,6 +20,16 @@ public class Main {
         Apiary temp = Apiary.getInstance(); 
         temp.addHive(); 
         
+        //Beehive (builder) demo
+        Beehive sampleHive = new Beehive.Builder(BeeType.KILLER) 
+            .withRooms(10)
+            .withWorkers(20)
+            .withWarriors(5)
+            .build(); 
         
+        System.out.println("\n" + sampleHive.toString()); 
     }
+        
+        
 }
+

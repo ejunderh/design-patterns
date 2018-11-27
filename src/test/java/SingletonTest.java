@@ -11,7 +11,7 @@ public class SingletonTest {
     Apiary test2 = Apiary.getInstance(); 
     
     @Test
-    public void methodTest() {
+    public void sameObjectTest() {
         assertSame(test, test2); 
     }
 
