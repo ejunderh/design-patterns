@@ -2,6 +2,12 @@ package main.java;
 
 import builder.java.Beehive;
 import builder.java.Beehive.BeeType;
+import decorator.java.Bee; 
+import decorator.java.BeeDecorator; 
+import decorator.java.Drone; 
+import decorator.java.Larva;
+import decorator.java.Queen; 
+import decorator.java.Warrior; 
 import singleton.java.Apiary; 
 
 /**
@@ -28,7 +34,17 @@ public class Main {
             .build(); 
         
         System.out.println("\n" + sampleHive.toString()); 
+        
+        //Bee creation (decorator) demo
+        Bee queen = new Queen(new Larva()); 
+        queen.hatch(); 
+        
+        System.out.println("\n");
+        Warrior warrior = new Warrior(new Larva());
+        warrior.hatch(); 
+        warrior.battle(); 
     }
+    
         
         
 }
