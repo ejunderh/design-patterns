@@ -1,8 +1,12 @@
 package test.java;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
-import decorator.java.*; 
+import decorator.java.Bee; 
+import decorator.java.Drone; 
+import decorator.java.Larva;
+import decorator.java.Queen;
+import decorator.java.Warrior; 
 import org.junit.Test;
 
 public class DecoratorTest {
@@ -17,7 +21,7 @@ public class DecoratorTest {
      */
     @Test
     public void eggLayTest() {
-        //purposefully declared as Bee rather than Larva 
+        //purposefully declared as Bee rather than Larva to ensure same type
         Bee newLarva = testQueen.layEgg(); 
         assertTrue(testLarva.getClass().equals(newLarva.getClass()));
     }
